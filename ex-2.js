@@ -2,6 +2,9 @@
 
 const isPalindrome = function (s) {
   //Start Coding here
+  let newSting = s.toLowerCase().replace(/[\W_]/g, "");
+  let reverse = newSting.split("").reverse().join("");
+  return newSting === reverse;
 };
 
 const result1 = isPalindrome("A man, a plan, a canal: Panama");
